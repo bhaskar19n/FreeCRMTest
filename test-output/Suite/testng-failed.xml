@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.crm.qa.ExtendReport.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.crm.qa.functionalTest.LoginLandingPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="LandingLoginTest"/>
+          <include name="launchApplicatonTest"/>
+        </methods>
+      </class> <!-- com.crm.qa.functionalTest.LoginLandingPageTest -->
+      <class name="com.crm.qa.functionalTest.ContactPageTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="NewContactTest" invocation-numbers="0 1"/>
+          <include name="ContactLinkNavigationTest"/>
+        </methods>
+      </class> <!-- com.crm.qa.functionalTest.ContactPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
