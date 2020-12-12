@@ -22,14 +22,14 @@ public class LoginPage extends TestBase{
 	//@FindBy(xpath="placeholder='E-mail address'")
 	//public  WebElement username;
 	@FindBy(name="email")
-	public static  WebElement username;
+	public  WebElement username;
 	
 	//input[@placeholder='E-mail address']
 	@FindBy(name="password")
-	public  static WebElement pw;
+	public  WebElement pw;
 	
 	@FindBy(xpath="//div[@class='ui fluid large blue submit button']")
-	public static   WebElement loginButton;
+	public  WebElement loginButton;
 	
 	@FindBy(xpath="//a[contains(text(),'Sign Up')]")
 	public WebElement SignUpLink;
@@ -39,7 +39,7 @@ public class LoginPage extends TestBase{
 		Assert.assertEquals(LoginPgTitle, "Cogmento CRM");
 		
 	}
-	public  static HomePage LoginToCRM(String un, String pwd) {
+	public HomePage LoginToCRM(String un, String pwd) {
 	/*	username.sendKeys(prop.getProperty("username"));
 	 * 
 		pw.sendKeys(prop.getProperty("password"));*/

@@ -6,17 +6,24 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.crm.qa.functionalTest.LoginLandingPageTest">
+      <class name="com.crm.qa.functionalTest.LoginPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="LandingLoginTest"/>
+          <include name="LoginToCRMtest"/>
           <include name="launchApplicatonTest"/>
         </methods>
-      </class> <!-- com.crm.qa.functionalTest.LoginLandingPageTest -->
+      </class> <!-- com.crm.qa.functionalTest.LoginPageTest -->
+      <class name="com.crm.qa.functionalTest.HomePageTest">
+        <methods>
+          <include name="launchApplicationTest"/>
+          <include name="contactListTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.functionalTest.HomePageTest -->
       <class name="com.crm.qa.functionalTest.ContactPageTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="NewContactTest" invocation-numbers="0 1"/>
+          <include name="NewContactTest"/>
           <include name="ContactLinkNavigationTest"/>
         </methods>
       </class> <!-- com.crm.qa.functionalTest.ContactPageTest -->

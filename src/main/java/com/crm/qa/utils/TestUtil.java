@@ -16,8 +16,8 @@ import org.openqa.selenium.TakesScreenshot;
 import com.crm.qa.base.TestBase;
 
 public class TestUtil extends TestBase{
-public static long PAGE_LOAD_TIMEOUT=100;
-public static long IMPLICIT_WAIT=100;
+public static long PAGE_LOAD_TIMEOUT=150;
+public static long IMPLICIT_WAIT=150;
 
 public static String TESTDATA_PATH="E:\\Selenium2020\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\TestData\\CRM TestData.xlsx";
  static Workbook book;

@@ -16,8 +16,9 @@ public class LoginLandingPage extends TestBase{
 	@FindBy(xpath="//span[contains(text(),'Log In')]")
 	public  WebElement landingPageLoginBtn;
 	
-	@FindBy(xpath="//div[@class='rd-navbar-panel']//a[@class='brand-name']")
-	WebElement crmLogo;
+	@FindBy(xpath="//a[@class='brand-name']")
+	////div[@class='rd-navbar-panel']//div[@class='rd-navbar-brand']
+	public WebElement crmLogo;
 	//Inialization of page factory
 
 	
@@ -29,9 +30,9 @@ public class LoginLandingPage extends TestBase{
 		return crmLogo.isDisplayed();
 		
 	}
-	public  LoginPage LandingLogin() {
+	public  void LandingLogin() {
 		landingPageLoginBtn.click();
-		return new LoginPage();
+		//return new LoginPage();
 	}
 
 }

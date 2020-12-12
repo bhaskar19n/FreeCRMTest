@@ -14,7 +14,7 @@ import com.crm.qa.utils.TestUtil;
 public class ContactPageTest extends TestBase {
 	public static LoginLandingPageTest LandingLoginTestObj;
 	LoginLandingPage landingLoginPgOb;
-	public  LoginPage LoginPg;
+	public  LoginPage LoginPage;
 	HomePage homePg = new HomePage();
 	ContactPage contactPg;
 	TestUtil testUtil;
@@ -41,12 +41,12 @@ public class ContactPageTest extends TestBase {
 		//landingLoginPgOb.LandingLogin();
 	
 		LandingLoginTestObj=new LoginLandingPageTest();
-		LandingLoginTestObj.LandingLoginTest();
+		//LandingLoginTestObj.LandingLoginTest();
 	 	//LoginPg=new LoginPage();
 		//LoginPage.LoginToCRM(prop.getProperty("username"),prop.getProperty("password"));
-				
-		homePg=new HomePage();homePg=
-				LoginPg.LoginToCRM(prop.getProperty("username"),prop.getProperty("password"));
+		LoginPage= new LoginPage();
+		homePg=new HomePage();
+		homePg=LoginPage.LoginToCRM(prop.getProperty("username"),prop.getProperty("password"));
 		contactPg=homePg.ClickContactLink();
 
 	}

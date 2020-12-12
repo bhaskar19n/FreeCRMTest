@@ -10,8 +10,8 @@ import com.crm.qa.PageRepository.LoginPage;
 import com.crm.qa.base.TestBase;
 
 public class LoginPageTest extends TestBase{
-	public LoginLandingPage landingLgnPgObj;
-	public static LoginPage loginPgO;
+	public LoginLandingPage landingLgnPgObj;//= new LoginLandingPage();
+	public LoginPage loginPgO;//= new LoginPage();
 	//HomePage homePg;
 
 	public LoginPageTest() {
@@ -39,13 +39,17 @@ public class LoginPageTest extends TestBase{
 @Test
 public  void LoginToCRMtest() {
 	System.out.println("LoginPageTest=TestMethod called -Login to CRM method");
-	//LoginPage.LoginToCRM(prop.getProperty("username"), prop.getProperty("password"));
-	//LoginPage.LoginToCRM(prop.getProperty("username"), prop.getProperty("password"));
 	landingLgnPgObj=new LoginLandingPage();
 	landingLgnPgObj.LandingLogin();
+	loginPgO = new LoginPage();
+	loginPgO.LoginToCRM(prop.getProperty("username"), prop.getProperty("password"));
+	//LoginPage.LoginToCRM(prop.getProperty("username"), prop.getProperty("password"));
+
 	//loginPgO=new LoginPage();
-		
-			   loginPgO.LoginToCRM(prop.getProperty("username"), prop.getProperty("password"));
+//	landingLgnPgObj=new LoginLandingPage();
+//	landingLgnPgObj.LandingLogin();
+//		
+//			   loginPgO.LoginToCRM(prop.getProperty("username"), prop.getProperty("password"));
 	}
 @AfterMethod
 public void tearDown() {

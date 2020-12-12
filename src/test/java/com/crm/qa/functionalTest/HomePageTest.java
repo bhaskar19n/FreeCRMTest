@@ -14,7 +14,7 @@ public class HomePageTest extends TestBase
 	LoginLandingPage landingLoginObject;
 	//HomePage homePgObj=new HomePage();
 	LoginPageTest loginPgTestObj;
-	public static LoginPage loginPgObj;
+	public LoginPage LoginPage;
 	public HomePageTest() {
 		super();
 }
@@ -29,7 +29,7 @@ public class HomePageTest extends TestBase
 		//loginPgTestObj= new LoginPageTest();
 		//loginPgTestObj.LoginToCRMtest();
 		
-		//loginPgObj= new LoginPage();
+		LoginPage= new LoginPage();
 		LoginPage.LoginToCRM(prop.getProperty("username"), prop.getProperty("password"));
 		//loginPgTestObj.LoginToCRMtest().
 		//homePgObj=loginPgTestObj.LoginToCRMtest();
