@@ -78,17 +78,9 @@
 		</dependency>
 		<!--Extent Reporting -->
 
-<!-- 		<dependency>
-			<groupId>com.perfecto.reporting-sdk</groupId>
-			<artifactId>reportium-sdk</artifactId>
-			<version>2.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.perfecto.reporting-sdk</groupId>
-			<artifactId>reportium-testng</artifactId>
-			<version>2.3</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>com.perfecto.reporting-sdk</groupId> <artifactId>reportium-sdk</artifactId> 
+			<version>2.3</version> </dependency> <dependency> <groupId>com.perfecto.reporting-sdk</groupId> 
+			<artifactId>reportium-testng</artifactId> <version>2.3</version> </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire -->
 		<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-api -->
@@ -122,6 +114,27 @@
 			<artifactId>surefire-booter</artifactId>
 			<version>3.0.0-M4</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.1.0</version>
+			<classifier>no_aop</classifier>
+			<scope>compile</scope>
+		</dependency>
+
 
 	</dependencies>
 	<build>
@@ -161,9 +174,8 @@
 								<value>false</value>
 
 								<name>listener</name>
-								<!-- <value>org.uncommons.reportng.HTMLReporter,
-									org.uncommons.reportng.JUnitXMLReporter</value> -->
-									<value>com.mycompany.MyResultListener,com.mycompany.MyAnnotationTransformer,com.mycompany.MyMethodInterceptor</value>
+								<!-- <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value> -->
+								<value>com.mycompany.MyResultListener,com.mycompany.MyAnnotationTransformer,com.mycompany.MyMethodInterceptor</value>
 
 								<workingDirectory>Surefire Test Result/</workingDirectory>
 							</configuration>

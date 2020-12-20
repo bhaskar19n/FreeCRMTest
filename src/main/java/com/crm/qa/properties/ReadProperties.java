@@ -10,7 +10,7 @@ public class ReadProperties {
 	public void PropertiesData() throws IOException {
 		
 		Properties prop= new Properties();
-		FileInputStream fin= new FileInputStream("E:\\Selenium2020\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\properties\\properties");
+		FileInputStream fin= new FileInputStream("E:\\Selenium2020\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\properties\\config.properties");
 		prop.load(fin);
 		System.out.println("Browser name= "+prop.getProperty("browser"));
 		String browserName=prop.getProperty("browser");
