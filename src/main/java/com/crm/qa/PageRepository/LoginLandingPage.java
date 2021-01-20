@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
 
+import io.qameta.allure.Step;
+
 public class LoginLandingPage extends TestBase{
 
 	public LoginLandingPage() {//current page class pageFactory "Constructor" has to be defined--
@@ -21,15 +23,16 @@ public class LoginLandingPage extends TestBase{
 	public WebElement crmLogo;
 	//Inialization of page factory
 
-	
+	@Step("Step1:LoginLandingPageTitle")
 	public String LoginLandingPageTitle() {
 		return driver.getTitle();
 	}
-	
+	@Step("Step2:CRMLogo")
 	public boolean CRMLogo() {
 		return crmLogo.isDisplayed();
 		
 	}
+	@Step("Step3:LandingLogin")
 	public  void LandingLogin() {
 		landingPageLoginBtn.click();
 		//return new LoginPage();

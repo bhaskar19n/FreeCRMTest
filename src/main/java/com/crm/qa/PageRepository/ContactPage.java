@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeMethod;
 
 import com.crm.qa.base.TestBase;
 
+import io.qameta.allure.Step;
+
 public class ContactPage extends TestBase{
 	public ContactPage(){
 	PageFactory.initElements(driver, this);
@@ -40,10 +42,12 @@ public class ContactPage extends TestBase{
 	
 	@FindBy(xpath="//i[@class='large user red icon']")
 	public static WebElement contactPhtoto;
-	public boolean ConatctPgHeader() {
+	//================================================
+	@Step("Step1:Contact page header")
+		public boolean ConatctPgHeader() {
 		return ContactsPageLabel.isDisplayed();
 	}
-	
+	@Step("Create new contact using fn{0} , ln{1}, comp{2}")
 	public void createNewContact(String fn,String ln, String comp) {
 		
 		FirstNameField.sendKeys(fn);

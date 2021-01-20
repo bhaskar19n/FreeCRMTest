@@ -3,13 +3,15 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="com.crm.qa.ExtendReport.ExtentReporterNG" />
+		<listener class-name="com.crm.qa.Analyzer.Transformer"></listener>
 	</listeners>
 	<test thread-count="5" name="Test">
 			<classes>
 				<class name="com.crm.qa.functionalTest.LoginLandingPageTest" />
 				<class name="com.crm.qa.functionalTest.HomePageTest" />
-<!-- 				<class name="com.crm.qa.functionalTest.LoginPageTest" />
-				<class name="com.crm.qa.functionalTest.ContactPageTest" /> -->
+				<class name="com.crm.qa.functionalTest.LoginPageTest" />
+				<class name="com.crm.qa.functionalTest.ContactPageTest" />
+			<!-- <class name="com.crm.qa.functionalTest.FailedClass" /> -->
 			</classes>
 		</test> <!-- Test -->
 </suite>

@@ -9,6 +9,10 @@ import com.crm.qa.PageRepository.LoginLandingPage;
 import com.crm.qa.PageRepository.LoginPage;
 import com.crm.qa.base.TestBase;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 public class HomePageTest extends TestBase
 {
 	LoginLandingPage landingLoginObject;
@@ -35,7 +39,10 @@ public class HomePageTest extends TestBase
 		//homePgObj=loginPgTestObj.LoginToCRMtest();
 	}
 	
+	//@Test(retryAnalyzer=com.crm.qa.Analyzer.FailedReExecute.class)
 	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Home Page- Contact check box select")
 	public static void contactListTest() {
 		
 		HomePage.contactBoxCheck();

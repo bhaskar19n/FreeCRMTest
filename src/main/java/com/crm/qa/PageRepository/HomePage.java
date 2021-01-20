@@ -9,6 +9,8 @@ import org.testng.Assert;
 
 import com.crm.qa.base.TestBase;
 
+import io.qameta.allure.Step;
+
 public class HomePage extends TestBase{
 	//HomePage homePgObj;
 	public HomePage() {
@@ -23,6 +25,7 @@ public class HomePage extends TestBase{
 	@FindBy(xpath="//span[contains(text(),'Contacts')]")
 	WebElement ContactsLink;
 	
+	@Step("Step1: contactBoxCheck")
 	public static void contactBoxCheck() {
 		/* HomePage homePgObj=PageFactory.initElements(driver, HomePage.class);
 		Assert.assertTrue(((WebElement) homePgObj).isDisplayed(),"ConatctBox is not displayed");*/
@@ -32,7 +35,7 @@ public class HomePage extends TestBase{
 	}
 
 	
-
+	@Step("Step2: contact link Click")
 	public ContactPage ClickContactLink() {
 
 		ContactsLink.click();

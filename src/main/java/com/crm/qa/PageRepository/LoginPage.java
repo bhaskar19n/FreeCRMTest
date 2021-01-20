@@ -9,6 +9,8 @@ import org.testng.Assert;
 
 import com.crm.qa.base.TestBase;
 
+import io.qameta.allure.Step;
+
 
 
 public class LoginPage extends TestBase{
@@ -33,12 +35,14 @@ public class LoginPage extends TestBase{
 	
 	@FindBy(xpath="//a[contains(text(),'Sign Up')]")
 	public WebElement SignUpLink;
-	
+	//=====================================================
+	@Step("Step1- Login page title")
 	public void VerifyLoginPageTitle() {
 		String LoginPgTitle=driver.getTitle();
 		Assert.assertEquals(LoginPgTitle, "Cogmento CRM");
 		
-	}
+	}	
+	@Step("Step:2:-Login to CRM using credentials : username{0}, password{1}")
 	public HomePage LoginToCRM(String un, String pwd) {
 	/*	username.sendKeys(prop.getProperty("username"));
 	 * 
